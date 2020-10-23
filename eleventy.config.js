@@ -1,4 +1,5 @@
 // Imports
+const transforms = require("./transforms");
 const collections = require("./collections");
 
 module.exports = config => {
@@ -12,6 +13,10 @@ module.exports = config => {
 
     // Layouts
     config.addLayoutAlias("default", "layouts/default.njk");
+
+    // Transforms
+    config.addTransform('purge-styles', transforms.purgeStyles);
+    config.addTransform("minify", transforms.minify);
 
     // Collections
     config.addCollection("allSorted", collections.allSortedColl);
