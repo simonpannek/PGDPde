@@ -10,6 +10,7 @@ module.exports = config => {
     // Pass through
     config.addPassthroughCopy("src/assets/favicon/*");
     config.addPassthroughCopy("src/assets/img/*");
+    config.addPassthroughCopy("src/assets/sound/*");
 
     // Layouts
     config.addLayoutAlias("default", "layouts/default.njk");

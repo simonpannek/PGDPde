@@ -1,3 +1,20 @@
 ---
 permalink: "/assets/css/home.min.css"
 ---
+/* Root */
+html {
+--background-lightness: 93%;
+--text-lightness: 31%;
+
+--background: hsl(0, 0%, var(--background-lightness));
+--text: hsl(0, 0%, var(--text-lightness));
+}
+
+html[data-theme='dark'] {
+--background-lightness: 7%;
+--text-lightness: 89%;
+}
+
+body {
+    background: var(--background);
+}
