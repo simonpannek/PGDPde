@@ -24,9 +24,7 @@
 
     <meta property="og:title" content="{{ metaTitle | trim }}">
     <meta property="og:description" content="{{ site.description | safe }}">
-    <!-- Add open graph image later
-    <meta property="og:image" content="">
-    -->
+    <meta property="og:image" content="{{ process.url }}{{ site.thumb | safe }}">
 
     <title>{{ metaTitle | trim }}</title>
 </head>
