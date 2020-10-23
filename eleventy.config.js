@@ -1,3 +1,6 @@
+// Imports
+const collections = require("./collections");
+
 module.exports = config => {
 
     // Data merge
@@ -5,6 +8,9 @@ module.exports = config => {
 
     // Layouts
     config.addLayoutAlias("default", "layouts/default.njk");
+
+    // Collections
+    config.addCollection("allSorted", collections.allSortedColl);
 
     return {
         dir: {

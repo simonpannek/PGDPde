@@ -1,0 +1,13 @@
+---
+permalink: "/sitemap.xml"
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 ">
+    {% for item in collections.allSorted %}
+        <url>
+            <loc>{{ process.url }}{{ item.url }}</loc>
+            <lastmod>{{ item.data.page.date.toISOString() }}</lastmod>
+            <priority>{% if item.data.priority %}{{ item.data.priority }}{% else %}0.5{% endif %}</priority>
+        </url>
+    {% endfor %}
+</urlset>
