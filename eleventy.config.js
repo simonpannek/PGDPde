@@ -6,6 +6,8 @@ module.exports = config => {
     // Data merge
     config.setDataDeepMerge(true);
 
+    // Pass through
+    config.addPassthroughCopy("src/assets/favicon/*");
     // Layouts
     config.addLayoutAlias("default", "layouts/default.njk");
 
