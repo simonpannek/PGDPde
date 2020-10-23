@@ -1,7 +1,8 @@
 # PGDPde
-[![Netlify Status](https://api.netlify.com/api/v1/badges/e98acbb7-eb81-449b-bb90-e31e41c231bc/deploy-status)](https://app.netlify.com/sites/pgdp/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e98acbb7-eb81-449b-bb90-e31e41c231bc/deploy-status)](https://pgdp.de/)
 
 A list featuring all tutors of the TUM course "Praktikum Grundlagen der Programmierung"
+
 https://pgdp.de/
 
 ## Run locally

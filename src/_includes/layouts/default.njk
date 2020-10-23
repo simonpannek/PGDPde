@@ -26,11 +26,15 @@
     <meta property="og:description" content="{{ site.description | safe }}">
     <meta property="og:image" content="{{ process.url }}{{ site.thumb | safe }}">
 
+    {% include "partials/head.njk" %}
+
     <title>{{ metaTitle | trim }}</title>
 </head>
 <body>
 
 {{ content | safe }}
+
+{% include "partials/body.njk" %}
 
 </body>
 </html>
