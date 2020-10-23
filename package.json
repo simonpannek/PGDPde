@@ -1,0 +1,25 @@
+{
+  "name": "pgdp.de",
+  "version": "1.0.0",
+  "description": "A list featuring all tutors of the TUM course \"Praktikum Grundlagen der Programmierung\"",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf build",
+    "start": "npm run clean && npx @11ty/eleventy --serve --config eleventy.config.js",
+    "build": "npm run clean && npx @11ty/eleventy --config eleventy.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SimonPannek/PGDPde.git"
+  },
+  "author": "Simon Pannek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SimonPannek/PGDPde/issues"
+  },
+  "homepage": "https://github.com/SimonPannek/PGDPde#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "rimraf": "^3.0.2"
+  }
+}
