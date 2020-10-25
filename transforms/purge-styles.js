@@ -4,10 +4,10 @@ module.exports = async function purgeStyles(content, outputPath) {
     if (outputPath.endsWith(".css")) {
         const [{ css: result }] = await new PurgeCSS().purge({
             content: [
-                'src/index.njk',
-                'src/_includes/layouts/*.njk',
-                'src/_includes/partials/*.njk',
-                'src/assets/js/*.njk',
+                "src/index.njk",
+                "src/_includes/layouts/*.njk",
+                "src/_includes/partials/*.njk",
+                "src/_includes/assets/js/*.js",
             ],
             css: [{ raw: content, extension: 'css' }]
         });

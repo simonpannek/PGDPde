@@ -1,0 +1,23 @@
+/* Root */
+html {
+    --upper-background-lightness: 93%;
+    --background-lightness: 75%;
+    --text-lightness: 31%;
+
+    --background-hue: 0;
+
+    --upper-background-sat: 100%;
+    --background-sat: 100%;
+
+    --upper-background: hsl(187, var(--upper-background-sat), var(--upper-background-lightness));
+    --background: hsl(var(--background-hue), var(--background-sat), var(--background-lightness));
+    --text: hsl(0, 0%, var(--text-lightness));
+}
+
+html[data-theme='dark'] {
+    --upper-background-lightness: 7%;
+    --background-lightness: 10%;
+    --text-lightness: 89%;
+
+    --upper-background-sat: 0%;
+}
