@@ -2,6 +2,9 @@
 const transforms = require("./transforms");
 const collections = require("./collections");
 
+// Shortcodes
+const { FontAwesomeIcon } = require("./modules/fontawesome-svg");
+
 module.exports = config => {
 
     // Data merge
@@ -21,6 +24,9 @@ module.exports = config => {
 
     // Collections
     config.addCollection("allSorted", collections.allSortedColl);
+
+    // Shortcodes
+    config.addNunjucksShortcode("FontAwesomeIcon", FontAwesomeIcon);
 
     return {
         dir: {
