@@ -1,3 +1,8 @@
 [build]
     publish = "build"
     command = "npm run build"
+
+[[redirects]]
+    from = "https://pgdp.netlify.app/*"
+    to = "https://pgdp.de/:splat"
+    status = 301
