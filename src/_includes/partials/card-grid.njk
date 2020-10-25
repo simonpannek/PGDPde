@@ -14,7 +14,7 @@
                     </a>{% endif %}
                 </h2>
 
-                <h4>
+                <h4 title="Time">
                     <span>{% FontAwesomeIcon name="clock", type="solid" %}</span> <span>{{ tutor.data.session }}</span>
                 </h4>
 
@@ -23,7 +23,7 @@
             </div>
 
             <div class="card-content{% if tutor.data.image %} content-image{% endif %}">
-                <h4><span>{% FontAwesomeIcon name="map-marker-alt", type="solid" %}</span>
+                <h4 title="Location"><span>{% FontAwesomeIcon name="map-marker-alt", type="solid" %}</span>
                     <span>{{ tutor.data.location }}</span></h4>
                 {{ tutor.templateContent | safe }}
             </div>
