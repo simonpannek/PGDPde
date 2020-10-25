@@ -16,6 +16,8 @@ module.exports = config => {
     config.addPassthroughCopy("src/assets/img/*");
     config.addPassthroughCopy("src/assets/sound/*");
 
+    config.addPassthroughCopy({"src/tutors/img/*": "assets/img/"});
+
     // Layouts
     config.addLayoutAlias("default", "layouts/default.njk");
 
@@ -29,6 +31,7 @@ module.exports = config => {
 
     // Collections
     config.addCollection("allSorted", collections.allSortedColl);
+    config.addCollection("cards", collections.cards);
 
     // Shortcodes
     config.addNunjucksShortcode("FontAwesomeIcon", FontAwesomeIcon);
