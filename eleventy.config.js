@@ -1,4 +1,5 @@
 // Imports
+const filters = require("./filters");
 const transforms = require("./transforms");
 const collections = require("./collections");
 
@@ -17,6 +18,10 @@ module.exports = config => {
 
     // Layouts
     config.addLayoutAlias("default", "layouts/default.njk");
+
+    // Filters
+    config.addNunjucksFilter("mapToColor", filters.mapToColor);
+    config.addNunjucksFilter("mapToLink", filters.mapToLink);
 
     // Transforms
     config.addTransform('purge-styles', transforms.purgeStyles);
