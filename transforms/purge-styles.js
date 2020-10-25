@@ -8,6 +8,8 @@ module.exports = async function purgeStyles(content, outputPath) {
                 "src/_includes/layouts/*.njk",
                 "src/_includes/partials/*.njk",
                 "src/_includes/assets/js/*.js",
+
+                "build/index.html"
             ],
             css: [{ raw: content, extension: 'css' }]
         });

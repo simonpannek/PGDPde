@@ -24,6 +24,7 @@ html[data-theme='dark'] {
 
 /* Body and containers */
 body {
+    font-family: -system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     background: var(--upper-background);
 }
 
@@ -80,13 +81,151 @@ body {
     background-color: var(--background);
 }
 
-.list {
-    width: 90vw;
+/* Cards */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    margin: 0 3rem;
+    text-align: center;
+    border-radius: 19px;
+    background: white;
+    box-shadow: -1px 15px 30px -12px black;
+}
+
+.card-container:nth-child(2n) {
+    justify-content: flex-end;
+}
+
+.card-container:nth-child(3n) {
+    justify-content: center;
+}
+
+.card .card-title {
+    position: absolute;
+    width: 100%;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+
+.card .card-content {
+    width: 95%;
+    margin-top: 7rem;
+    margin-bottom: 3rem;
+}
+
+.card .content-image {
+    margin-top: 19rem;
+}
+
+.card .card-bottom {
+    font-weight: 700;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    border-bottom-right-radius: 14px;
+    border-bottom-left-radius: 14px;
+}
+
+.card-blue .card-title {
+    background: linear-gradient(40deg, #45cafc, #606fd2);
+}
+
+.card-blue .card-bottom {
+    background: #3f51b5;
+}
+
+.card-green .card-title {
+    background: linear-gradient(220deg, #43a396, #00db66);
+}
+
+.card-green .card-bottom {
+    background: #40a569;
+}
+
+.card-yellow .card-title {
+    background: linear-gradient(40deg, #f7971e, #ffd200);
+}
+
+.card-yellow .card-bottom {
+    background: #ffa805;
+}
+
+.card-red .card-title {
+    background: linear-gradient(40deg, #cc6666, #af4b31);
+}
+
+.card-red .card-bottom {
+    background: #b81428;
+}
+
+.card-purple .card-title {
+    background: linear-gradient(40deg, #d3507b, #9a64c4);
+}
+
+.card-purple .card-bottom {
+    background: #743c9e;
+}
+
+.clearfix:after {
+    font-size: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    content: " ";
 }
 
 /* Content */
+.icon {
+    margin-right: 5px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
 .icon svg {
-    display: block;
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.container a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-title a {
+    margin-right: 35px;
+}
+
+.card-title img {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    max-width: 100% !important;
+    height: 12rem;
+    object-fit: cover;
+}
+
+.card-title img.flag {
+    position: absolute;
+    right: 0;
+    left: unset;
+    width: 40px;
+    height: 100%;
+    object-fit: unset;
+    border-top-right-radius: 14px;
 }
