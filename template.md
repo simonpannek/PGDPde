@@ -10,9 +10,9 @@ language: de
 color: red
 ---
 
-Fill out the fields above and put a short introduction here (instead of this text). Concerning the language of the introduction, choose either en or German (perferably the language of your tutor session).
+Fill out the fields above and put a short introduction here (instead of this text). Concerning the language of the introduction, choose either English or German (preferably the language of your tutor session).
 
-Here is a short explanation to the fields above:
+Here is a short explanation for the fields above:
 - firstName (your first name; required)
 - lastName (your last name; required)
 - image (a picture of you, you can put into `/src/tutors/img/`; optional)
