@@ -9,8 +9,10 @@ function setTheme(dark = darkTheme()) {
     darkTheme(dark);
 
     document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+}
 
-    if (typeof specificActions !== "undefined") specificActions(dark);
+function toggleTheme() {
+    setTheme(!darkTheme());
 }
 
 function playAudio(dark) {
