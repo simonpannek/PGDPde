@@ -2,6 +2,7 @@
 firstName: Yudhistira
 lastName: Wibowo
 website: https://home.in.tum.de/~wibowo/tutor/
+session: Not available yet
 location: Online
 sessionLink: https://bbb.in.tum.de/yud-4hd-a9p
 language: en
