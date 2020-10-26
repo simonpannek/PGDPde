@@ -3,6 +3,7 @@
         <div class="card card-{% if tutor.data.color %}{{ tutor.data.color }}{% else %}{{ loop.index0 | mapToColor }}{% endif %}">
             <div class="card-title">
                 <img class="flag" src="{{ (tutor.data.language + ".jpg") | mapToLink }}" alt="Image not found"/>
+                <div class="title-content">
                 <h2>
                     {% if tutor.data.website %}
                     <a href="{{ tutor.data.website }}" target="_blank" rel="noopener">{% endif %}
@@ -17,6 +18,7 @@
                 <h4 title="Time">
                     <span>{% FontAwesomeIcon name="clock", type="solid" %}</span> <span>{{ tutor.data.session }}</span>
                 </h4>
+                </div>
 
                 {% if tutor.data.image %}<img src="{{ tutor.data.image | mapToLink }}"
                                               alt="Image not found"/>{% endif %}

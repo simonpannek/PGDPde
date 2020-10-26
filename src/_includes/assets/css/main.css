@@ -35,12 +35,7 @@ body {
     color: var(--text);
 }
 
-.container img {
-    width: 15vh;
-    max-width: 70vw;
-}
-
-.container svg {
+.regular svg {
     width: 100%;
     height: 5vw;
     fill: var(--background);
@@ -81,6 +76,50 @@ body {
     background-color: var(--background);
 }
 
+/* Header */
+
+#penguin {
+    max-width: 60vw;
+    height: 20vh;
+    cursor: pointer
+}
+
+.foot {
+    fill: #fc9f3a;
+}
+
+.foot.dark {
+    fill: #f79411;
+}
+
+.outerBody {
+    fill: #2d2d2d;
+}
+
+.outerBody.dark {
+    fill: #252525;
+}
+
+.innerBody {
+    fill: #fff;
+}
+
+.eye {
+    fill: #252525;
+}
+
+html[data-theme=dark] .eye {
+    fill: #ab0000
+}
+
+.beak {
+    fill: #fc9f3a
+}
+
+.beak.dark {
+    fill: #f79411
+}
+
 /* Cards */
 .grid {
     display: flex;
@@ -97,13 +136,21 @@ body {
 .card {
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     width: 350px;
+    max-width: 90vw;
     margin: 0 3rem;
     text-align: center;
     border-radius: 19px;
-    background: white;
-    box-shadow: -1px 15px 30px -12px black;
+    background: #ffffff;
+    box-shadow: -1px 15px 30px -12px #000000;
+}
+
+@media (max-width: 500px) {
+    .card {
+        margin: 0
+    }
 }
 
 .card-container:nth-child(2n) {
@@ -115,7 +162,7 @@ body {
 }
 
 .card .card-title {
-    position: absolute;
+    position: relative;
     width: 100%;
     border-top-left-radius: 14px;
     border-top-right-radius: 14px;
@@ -123,8 +170,7 @@ body {
 
 .card .card-content {
     width: 95%;
-    margin-top: 7rem;
-    margin-bottom: 3rem;
+    margin: auto;
 }
 
 .card .content-image {
@@ -133,10 +179,9 @@ body {
 
 .card .card-bottom {
     font-weight: 700;
-    position: absolute;
     bottom: 0;
     width: 100%;
-    color: white;
+    color: #ffffff;
     border-bottom-right-radius: 14px;
     border-bottom-left-radius: 14px;
 }
@@ -206,8 +251,8 @@ body {
     color: inherit;
 }
 
-.card-title a {
-    margin-right: 35px;
+.title-content {
+    width: calc(100% - 50px);
 }
 
 .card-title img {
@@ -225,6 +270,6 @@ body {
     left: unset;
     width: 40px;
     height: 100%;
-    object-fit: unset;
     border-top-right-radius: 14px;
+    object-fit: unset;
 }
