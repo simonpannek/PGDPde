@@ -12,7 +12,7 @@ If you want to run the website locally, run `npm install` to install all depende
 ## Contributing
 
 ### Add another Tutor
-If you want to add another tutor, just add your file to the folder /site/tutors/ using a pull request (for a template, check out the `template.md` file). Your file should have the name `lastname-firstname.md`.
+If you want to add another tutor, just add your file to the folder /src/tutors/ using a pull request (for a template, check out the `template.md` file). Your file should have the name `lastname-firstname.md`.
 
 Notes:
 - Before opening a pull request, check whether your changes have the right syntax and format. This saves me a lot of time.
