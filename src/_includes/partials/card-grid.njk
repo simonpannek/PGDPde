@@ -23,9 +23,7 @@
             </div>
 
             {% if tutor.data.image %}
-                <img class="b-lazy"
-                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                     data-src="{{ tutor.data.image | mapToLink }}" alt="Image not found"/>
+                <img src="{{ tutor.data.image | mapToLink }}" alt="Image not found"/>
             {% endif %}
 
             <div class="card-content">

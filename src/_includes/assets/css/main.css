@@ -316,13 +316,3 @@ html[data-theme='dark'] .card-purple .card-title {
     border-top-right-radius: 14px;
     object-fit: unset;
 }
-
-/* bLazy */
-.b-lazy {
-    height: 200px;
-}
-
-/* purgecss ignore */
-.b-loaded {
-    height: unset;
-}
