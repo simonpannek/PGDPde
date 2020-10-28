@@ -1,0 +1,50 @@
+---
+layout: default
+---
+<div class="container grid">
+    <div class="card-container">
+        <div class="card card-{% if color %}{{ color }}{% else %}{{ loop.index0 | mapToColor }}{% endif %}">
+            <div class="card-title">
+                <img class="flag" src="{{ (language + ".jpg") | mapToLink }}" alt="Image not found"/>
+                <div class="title-content">
+                    <h2>
+                        {% if website %}
+                        <a href="{{ website }}" target="_blank" rel="noopener">{% endif %}
+
+                            {{ lastName }}, {{ firstName }}
+
+                            {% if website %}
+                            <span>{% FontAwesomeIcon name="globe", type="solid" %}</span>
+                        </a>{% endif %}
+                    </h2>
+
+                    <h4 title="Time">
+                        <span>{% FontAwesomeIcon name="clock", type="solid" %}</span>
+                        <span>{{ session }}</span>
+                    </h4>
+                </div>
+            </div>
+
+            {% if image %}
+                <img class="b-lazy"
+                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     data-src="{{ image | mapToLink }}" alt="Image not found"/>
+            {% endif %}
+
+            <div class="card-content">
+                <h4 title="Location"><span>{% FontAwesomeIcon name="map-marker-alt", type="solid" %}</span>
+                    <span>{{ location }}</span></h4>
+                {{ content | safe }}
+            </div>
+
+            <div class="card-bottom clearfix">
+                <p>{% if sessionLink %}
+                        <a href="{{ sessionLink }}">Link to session</a>
+                    {% else %}
+                        No link available
+                    {% endif %}</p>
+            </div>
+
+        </div>
+    </div>
+</div>
