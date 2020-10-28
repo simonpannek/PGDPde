@@ -3,7 +3,9 @@
 <!-- Main -->
 <link href="/assets/css/main.min.css" rel="stylesheet">
 
-<!-- Theme -->
-<script src="/assets/js/theme.min.js"></script>
-<!-- Before -->
-<script src="/assets/js/beforeMain.min.js"></script>
+{% if page.url == "/" %}
+    <!-- Theme -->
+    <script src="/assets/js/theme.min.js"></script>
+    <!-- Before -->
+    <script src="/assets/js/beforeMain.min.js"></script>
+{% endif %}
