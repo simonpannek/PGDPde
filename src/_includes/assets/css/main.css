@@ -126,10 +126,6 @@ html[data-theme='dark'] .body {
     fill: #252525;
 }
 
-html[data-theme=dark] .eye {
-    fill: #ab0000
-}
-
 .beak {
     fill: #fc9f3a
 }
@@ -302,4 +298,13 @@ html[data-theme='dark'] .card-purple .card-title {
     height: 100%;
     border-top-right-radius: 14px;
     object-fit: unset;
+}
+
+/* bLazy */
+.b-lazy {
+    height: 200px;
+}
+
+.b-loaded {
+    height: unset;
 }
