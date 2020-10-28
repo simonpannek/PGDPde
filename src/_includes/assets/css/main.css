@@ -14,11 +14,6 @@ html {
     --background: hsl(187, var(--background-sat), var(--background-lightness));
     --card: hsl(0, 0%, var(--card-lightness));
     --text: hsl(0, 0%, var(--text-lightness));
-
-    --shadow-hue: 0;
-    --shadow-strength: 0.5;
-
-    --shadow: drop-shadow(-50vw -8vh 10vh hsla(var(--shadow-hue), 100%, 50%, var(--shadow-strength))) drop-shadow(50vw -12vh 10vh hsla(var(--shadow-hue), 100%, 50%, var(--shadow-strength)));
 }
 
 html[data-theme='dark'] {
@@ -43,11 +38,15 @@ body {
     color: var(--text);
 }
 
+.parallax-wrapper {
+    height: calc(95vh - 15vw);
+}
+
 .parallax {
     position: fixed;
     top: 2rem;
     left: 50%;
-    height: 50vh;
+    width: 95vw;
 
     -moz-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
@@ -58,7 +57,6 @@ body {
 
 .regular {
     position: relative;
-    top: 60vh;
 }
 
 .regular .separator {
@@ -70,8 +68,6 @@ body {
 
 /* Parts */
 .info {
-    width: 50vh;
-    max-width: 90vw;
     margin-top: 1rem;
     text-align: center;
 }
@@ -82,14 +78,6 @@ body {
     width: 100%;
     min-height: 50vh;
     background-color: var(--background);
-
-    -webkit-filter: var(--shadow);
-    filter: var(--shadow);
-}
-
-html[data-theme='dark'] .body {
-    -webkit-filter: var(--shadow);
-    filter: var(--shadow);
 }
 
 /* Header */
@@ -97,7 +85,9 @@ html[data-theme='dark'] .body {
     max-width: 60vw;
     height: 20vh;
     cursor: pointer;
+}
 
+html[data-theme='dark'] #penguin {
     -webkit-filter: drop-shadow(0 0 8px hsla(0, 100%, 100%, .5));
     filter: drop-shadow(0 0 8px hsla(0, 100%, 100%, .5));
 }

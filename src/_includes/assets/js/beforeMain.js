@@ -3,8 +3,6 @@ function setBackground(hue, sat, shadowHue, shadowStrength) {
 
     style.setProperty("--upper-background-hue", hue);
     style.setProperty("--upper-background-sat", sat + "%");
-    style.setProperty("--shadow-hue", shadowHue);
-    style.setProperty("--shadow-strength", shadowStrength);
 }
 
 function updateBackground() {
@@ -12,18 +10,14 @@ function updateBackground() {
     const hue = 240 - getSin();
     const sat = 40 + getSin();
 
-    // Get hue and strength for shadow
-    const shadowHue = getSin(40);
-    const shadowStrength = getSin(0.5, true, 4, 5);
-
     // Set hue and saturation from date
-    setBackground(hue, sat, shadowHue, shadowStrength);
+    setBackground(hue, sat);
 }
 
-function getSin(range = 50, fixed = false, frequency = 1, shift = 0) {
+function getSin() {
     const now = new Date();
-    const sin = Math.sin(((now.getHours() - shift) * 60 + now.getMinutes()) / 1440 * frequency * Math.PI) * range;
-    return fixed ? sin.toFixed(3) : Math.ceil(sin);
+    const sin = Math.sin((now.getHours() * 60 + now.getMinutes()) / 1440 * Math.PI) * 50;
+    return Math.ceil(sin);
 }
 
 // Update background every 5 minutes
