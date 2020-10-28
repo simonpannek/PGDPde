@@ -4,27 +4,29 @@
             <div class="card-title">
                 <img class="flag" src="{{ (tutor.data.language + ".jpg") | mapToLink }}" alt="Image not found"/>
                 <div class="title-content">
-                <h2>
-                    {% if tutor.data.website %}
-                    <a href="{{ tutor.data.website }}" target="_blank" rel="noopener">{% endif %}
-
-                        {{ tutor.data.lastName }}, {{ tutor.data.firstName }}
-
+                    <h2>
                         {% if tutor.data.website %}
-                        <span>{% FontAwesomeIcon name="globe", type="solid" %}</span>
-                    </a>{% endif %}
-                </h2>
+                        <a href="{{ tutor.data.website }}" target="_blank" rel="noopener">{% endif %}
 
-                <h4 title="Time">
-                    <span>{% FontAwesomeIcon name="clock", type="solid" %}</span> <span>{{ tutor.data.session }}</span>
-                </h4>
+                            {{ tutor.data.lastName }}, {{ tutor.data.firstName }}
+
+                            {% if tutor.data.website %}
+                            <span>{% FontAwesomeIcon name="globe", type="solid" %}</span>
+                        </a>{% endif %}
+                    </h2>
+
+                    <h4 title="Time">
+                        <span>{% FontAwesomeIcon name="clock", type="solid" %}</span>
+                        <span>{{ tutor.data.session }}</span>
+                    </h4>
                 </div>
-
-                {% if tutor.data.image %}<img src="{{ tutor.data.image | mapToLink }}"
-                                              alt="Image not found"/>{% endif %}
             </div>
 
-            <div class="card-content{% if tutor.data.image %} content-image{% endif %}">
+            {% if tutor.data.image %}
+                <img src="{{ tutor.data.image | mapToLink }}" alt="Image not found"/>
+            {% endif %}
+
+            <div class="card-content">
                 <h4 title="Location"><span>{% FontAwesomeIcon name="map-marker-alt", type="solid" %}</span>
                     <span>{{ tutor.data.location }}</span></h4>
                 {{ tutor.templateContent | safe }}

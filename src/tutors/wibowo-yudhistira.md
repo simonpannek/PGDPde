@@ -9,5 +9,5 @@ language: en
 color: blue
 ---
 
-Hello,
-I am Yudhistira Wibowo and I came from a far far away. I am pleased to have a nice discussion. You can contact me on Discord itsmeYAW#1268.
+Hello, I am Yudhistira Wibowo and I came from a far far away. I am pleased to have a nice discussion.
+You can contact me on Discord (itsmeYAW#1268).

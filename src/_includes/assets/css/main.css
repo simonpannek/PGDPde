@@ -255,13 +255,8 @@ html[data-theme=dark] .eye {
     width: calc(100% - 50px);
 }
 
-.card-title img {
-    position: absolute;
-    left: 0;
+.card img {
     width: 100%;
-    max-width: 100% !important;
-    height: 12rem;
-    object-fit: cover;
 }
 
 .card-title img.flag {
