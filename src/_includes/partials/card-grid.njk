@@ -1,5 +1,5 @@
 {% for tutor in collections.cards %}
-    <div class="card-container">
+    <div id="{{ tutor.data.page.fileSlug | hashString }}" class="card-container">
         <div class="card card-{% if tutor.data.color %}{{ tutor.data.color }}{% else %}{{ loop.index0 | mapToColor }}{% endif %}">
             <div class="card-title">
                 <img class="flag" src="{{ (tutor.data.language + ".jpg") | mapToLink }}" alt="Image not found"/>
@@ -35,6 +35,8 @@
             </div>
 
             <div class="card-bottom clearfix">
+                {% FontAwesomeIcon name="thumbtack", type="solid", class="pin", title="Pin card" %}
+
                 <p>{% if tutor.data.sessionLink %}
                         <a href="{{ tutor.data.sessionLink }}">Link to session</a>
                     {% else %}

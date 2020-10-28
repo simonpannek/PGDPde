@@ -144,8 +144,8 @@ html[data-theme='dark'] .body {
 .card-container {
     display: flex;
     flex-direction: column;
-    margin-bottom: 2rem;
     order: 1;
+    margin-bottom: 2rem;
 }
 
 .card {
@@ -190,6 +190,7 @@ html[data-theme='dark'] .body {
 
 .card .card-bottom {
     font-weight: 700;
+    position: relative;
     bottom: 0;
     width: 100%;
     color: #ffffff;
@@ -284,6 +285,22 @@ html[data-theme='dark'] .card-purple .card-title {
 
 .title-content {
     width: calc(100% - 50px);
+}
+
+.pin {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    cursor: pointer;
+    transform: rotate(-45deg);
+}
+
+.pin:hover {
+    color: #dddddd;
+}
+
+.pinned .pin {
+    color: #8b0000;
 }
 
 .card img {
