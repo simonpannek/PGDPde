@@ -305,6 +305,7 @@ html[data-theme='dark'] .card-purple .card-title {
     height: 200px;
 }
 
+/* purgecss ignore */
 .b-loaded {
     height: unset;
 }
