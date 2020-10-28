@@ -26,10 +26,7 @@ updatePins().forEach(id => {
 });
 
 // Event listeners
-document.getElementById("penguin").onclick = () => {
-    toggleTheme();
-    playAudio(darkTheme());
-}
+document.getElementById("penguin").onclick = () => toggleTheme();
 
 const pins = document.getElementsByClassName("pin");
 for (let pin of pins) {

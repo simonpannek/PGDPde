@@ -15,8 +15,4 @@ function toggleTheme() {
     setTheme(!darkTheme());
 }
 
-function playAudio(dark) {
-    new Audio("/assets/sound/" + (dark ? "on" : "off") + ".mp3").play();
-}
-
 setTheme();
