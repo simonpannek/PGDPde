@@ -1,10 +1,9 @@
 ---
 firstName: Severin
 lastName: Schmidmeier
-website: https://tum.lol
+website: https://tum.lol/
 session: Not available yet
 location: Online
-sessionLink: Not available yet
 language: de
 color: purple
 ---
