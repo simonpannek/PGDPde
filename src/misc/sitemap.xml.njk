@@ -6,7 +6,6 @@ permalink: "/sitemap.xml"
     {% for item in collections.allSorted %}
         <url>
             <loc>{{ process.url }}{{ item.url }}</loc>
-            <lastmod>{{ item.data.page.date.toISOString() }}</lastmod>
             <priority>{% if item.data.priority %}{{ item.data.priority }}{% else %}0.5{% endif %}</priority>
         </url>
     {% endfor %}

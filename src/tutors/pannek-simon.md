@@ -5,6 +5,7 @@ image: pannek-simon.jpg
 session: Not available yet
 location: Online
 language: de
+color: yellow
 ---
 
 Hallo, ich bin Simon und ich studiere aktuell im 3. Semester des Bachelor Informatik.
