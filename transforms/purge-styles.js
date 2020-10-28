@@ -11,6 +11,7 @@ module.exports = async function purgeStyles(content, outputPath) {
 
                 "build/index.html"
             ],
+            whitelist: ["b-loaded"],
             css: [{ raw: content, extension: 'css' }]
         });
         return result;
