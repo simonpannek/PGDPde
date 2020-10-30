@@ -19,22 +19,18 @@ const updatePins = function (id) {
     return pins;
 };
 
-updatePins().forEach(id => {
-    const element = document.getElementById(id);
-    element.style.order = "0";
-    element.classList.toggle("pinned", true);
-});
+updatePins().forEach(id => document.getElementById(id).classList.toggle("pinned", true));
 
 // Event listeners
 document.getElementById("penguin").onclick = () => toggleTheme();
 
-const pins = document.getElementsByClassName("pin");
-for (let pin of pins) {
+for (let pin of document.getElementsByClassName("pin")) {
     pin.onclick = event => {
+        // Get container
         let target = event.target;
         while (!target.id) target = target.parentNode;
-        const pinned =  updatePins(target.id).includes(target.id);
-        target.style.order = pinned ? "0" : "1";
-        target.classList.toggle("pinned", pinned);
+
+        // Toggle pinned state
+        target.classList.toggle("pinned", updatePins(target.id).includes(target.id));
     };
 }

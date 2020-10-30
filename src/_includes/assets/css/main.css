@@ -289,6 +289,10 @@ html[data-theme='dark'] .card-purple .card-title {
     color: #dddddd;
 }
 
+.pinned {
+    order: 0;
+}
+
 .pinned .pin {
     color: #8b0000;
 }
