@@ -2,7 +2,7 @@
 firstName: Severin
 lastName: Schmidmeier
 website: https://tum.lol/
-session: Not available yet
+session: Donnerstag 15:00-18:00
 location: Online
 language: de
 color: purple
