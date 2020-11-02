@@ -2,8 +2,9 @@
 firstName: Simon
 lastName: Pannek
 image: pannek-simon.jpg
-session: Not available yet
+session: Monday, 09:00
 location: Online
+sessionLink: https://bbb.in.tum.de/sim-rhc-qgk
 language: de
 color: yellow
 ---
