@@ -1,4 +1,4 @@
 module.exports = {
     allSortedColl : require("./allSorted"),
-    cards : require("./cards"),
+    cards : require("./cards")
 }
