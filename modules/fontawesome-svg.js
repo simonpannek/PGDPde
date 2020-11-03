@@ -4,7 +4,7 @@ require("intl-list-format/locale-data/en");
 const fs = require("fs");
 const path = require("path");
 const camelCase = require("camelcase");
-const { icon, toHtml } = require("@fortawesome/fontawesome-svg-core");
+const {icon, toHtml} = require("@fortawesome/fontawesome-svg-core");
 const allBrandsIcons = require("@fortawesome/free-brands-svg-icons");
 const allSolidIcons = require("@fortawesome/free-solid-svg-icons");
 const allRegularIcons = require("@fortawesome/free-regular-svg-icons");
@@ -109,7 +109,7 @@ function isIconAvailable(name, type) {
             `FontAwesomeIcon:: couldn't find the icon set for the type '${type}'.`
         );
     }
-    const faName = camelCase(name, { pascalCase: false });
+    const faName = camelCase(name, {pascalCase: false});
     if (availableIcons.includes(faName)) {
         return console.log(
             `FontAwesomeIcon:: yes, the icon '${faName}' is available in type '${type}'.`
@@ -127,7 +127,7 @@ function isIconAvailable(name, type) {
     }
 }
 
-function FontAwesomeIcon({ name, type = "solid", tag = "i", url = "fa-icons", ...rest }) {
+function FontAwesomeIcon({name, type = "solid", tag = "i", url = "fa-icons", ...rest}) {
     if (!TYPES.includes(type)) {
         console.warn(
             `FontAwesomeIcon:: you specified the type ${type} for the icon ${name}. The "type" parameter must be one of: ${LIST_FORMATTER.format(
@@ -136,20 +136,22 @@ function FontAwesomeIcon({ name, type = "solid", tag = "i", url = "fa-icons", ..
         );
         type = "solid";
     }
-    const faName = camelCase(name, { pascalCase: true });
+    const faName = camelCase(name, {pascalCase: true});
     const iconName = `fa${faName}`;
     let iconSet = getIconSet(type);
     let attrClass = rest.class ? ` ${rest.class}` : ``;
     delete rest.class;
     let id = rest.id ? rest.id : undefined;
     delete rest.id;
+    let title = rest.title ? rest.title : undefined;
+    delete rest.title;
 
     let attrs = _getAttrs(rest);
-    let faIcon = icon(iconSet[iconName], { symbol: true });
+    let faIcon = icon(iconSet[iconName], {symbol: true});
     if (!faIcon) {
         const newType = type === "solid" ? "regular" : "solid";
         iconSet = getIconSet(newType);
-        faIcon = icon(iconSet[iconName], { symbol: true });
+        faIcon = icon(iconSet[iconName], {symbol: true});
         if (!faIcon) {
             console.warn(
                 `FontAwesomeIcon:: you tried to use the icon ${name} with type ${type}, but it doesn't exist in the free version of FontAwesome. You can check available types in your  .eleventy.js file - see the docs.`
@@ -167,12 +169,12 @@ function FontAwesomeIcon({ name, type = "solid", tag = "i", url = "fa-icons", ..
 
     if (!symbols[faIconId]) {
         svgSymbol = toHtml(
-            icon(iconSet[iconName], { symbol: true }).abstract[0].children[0]
+            icon(iconSet[iconName], {symbol: true}).abstract[0].children[0]
         );
         symbols[faIconId] = svgSymbol;
         writeSvg(url);
     }
-    return `<${tag} ${id ? 'id="' + id + '" ' : ''}class="icon${attrClass}"${attrs}><svg><use xlink:href="${build_path}/${url}.svg#${faIconId}"></use></svg></${tag}>`;
+    return `<${tag} ${id ? 'id="' + id + '" ' : ''}${title ? 'title="' + title + '" ' : ''}class="icon${attrClass}"${attrs}><svg><use xlink:href="${build_path}/${url}.svg#${faIconId}"></use></svg></${tag}>`;
 }
 
-module.exports = { FontAwesomeIcon, getAvailableIcons, isIconAvailable };
+module.exports = {FontAwesomeIcon, getAvailableIcons, isIconAvailable};

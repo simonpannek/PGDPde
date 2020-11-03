@@ -20,8 +20,10 @@ module.exports = config => {
 
     // Layouts
     config.addLayoutAlias("default", "layouts/default.njk");
+    config.addLayoutAlias("card", "layouts/card.njk");
 
     // Filters
+    config.addNunjucksFilter("hashString", filters.hashString);
     config.addNunjucksFilter("mapToColor", filters.mapToColor);
     config.addNunjucksFilter("mapToLink", filters.mapToLink);
 

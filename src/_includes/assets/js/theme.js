@@ -9,12 +9,10 @@ function setTheme(dark = darkTheme()) {
     darkTheme(dark);
 
     document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
-
-    if (typeof specificActions !== "undefined") specificActions(dark);
 }
 
-function playAudio(dark) {
-    new Audio("/assets/sound/" + (dark ? "on" : "off") + ".mp3").play();
+function toggleTheme() {
+    setTheme(!darkTheme());
 }
 
 setTheme();

@@ -6,3 +6,4 @@
     from = "https://pgdp.netlify.app/*"
     to = "https://pgdp.de/:splat"
     status = 301
+    force = true

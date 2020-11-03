@@ -1,19 +1,36 @@
-function setBackground(hue, sat) {
-    const style = document.documentElement.style;
-    style.setProperty("--background-hue", hue);
-    style.setProperty("--background-sat", sat + "%");
+// Access and save pins
+const updatePins = function (id) {
+    // Get pins
+    const pins = localStorage.getItem("pins") ? JSON.parse(localStorage.getItem("pins")) : [];
+
+    // Check if a pin has to be added/removed
+    if (typeof id === "string") {
+        const index = pins.indexOf(id);
+        if (index < 0) {
+            // Add pin
+            pins.push(id);
+        } else {
+            // Remove pin
+            pins.splice(index, 1);
+        }
+        // Update pins
+        localStorage.setItem("pins", JSON.stringify(pins));
+    }
+    return pins;
+};
+
+updatePins().forEach(id => document.getElementById(id).classList.toggle("pinned", true));
+
+// Event listeners
+document.getElementById("penguin").onclick = () => toggleTheme();
+
+for (let pin of document.getElementsByClassName("pin")) {
+    pin.onclick = event => {
+        // Get container
+        let target = event.target;
+        while (!target.id) target = target.parentNode;
+
+        // Toggle pinned state
+        target.classList.toggle("pinned", updatePins(target.id).includes(target.id));
+    };
 }
-
-function updateBackground(hour = new Date().getHours(), minutes = new Date().getMinutes()) {
-    const hue = Math.floor(((hour - 6) * 60 + minutes) / 4) % 360;
-    const sat = 40 + Math.ceil(Math.sin((hour * 60 + minutes) / 1440 * Math.PI) * 60);
-
-    // Set hue and saturation from date
-    setBackground(hue, sat);
-}
-
-// Update background every 4 minutes
-setInterval(function () {
-    updateBackground();
-}, 1000 * 60 * 4);
-updateBackground();

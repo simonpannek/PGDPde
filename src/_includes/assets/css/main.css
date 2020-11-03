@@ -1,25 +1,28 @@
 /* Root */
 html {
-    --upper-background-lightness: 93%;
-    --background-lightness: 75%;
-    --text-lightness: 31%;
+    --upper-background-lightness: 75%;
+    --background-lightness: 93%;
+    --card-lightness: 100%;
+    --text-lightness: 12%;
 
-    --background-hue: 200;
+    --upper-background-hue: 200;
 
-    --upper-background-sat: 100%;
     --background-sat: 100%;
+    --upper-background-sat: 100%;
 
-    --upper-background: hsl(187, var(--upper-background-sat), var(--upper-background-lightness));
-    --background: hsl(var(--background-hue), var(--background-sat), var(--background-lightness));
+    --upper-background: hsl(var(--upper-background-hue), var(--upper-background-sat), var(--upper-background-lightness));
+    --background: hsl(187, var(--background-sat), var(--background-lightness));
+    --card: hsl(0, 0%, var(--card-lightness));
     --text: hsl(0, 0%, var(--text-lightness));
 }
 
 html[data-theme='dark'] {
-    --upper-background-lightness: 7%;
-    --background-lightness: 10%;
-    --text-lightness: 89%;
+    --upper-background-lightness: 10%;
+    --background-lightness: 12%;
+    --card-lightness: 15%;
+    --text-lightness: 92%;
 
-    --upper-background-sat: 0%;
+    --background-sat: 0%;
 }
 
 /* Body and containers */
@@ -35,42 +38,39 @@ body {
     color: var(--text);
 }
 
-.container img {
-    width: 15vh;
-    max-width: 70vw;
+.parallax-wrapper {
+    height: calc(10vh + 20vw + 30rem);
+    max-height: calc(60vh - 8vw + 10rem);
 }
 
-.container svg {
-    width: 100%;
-    height: 5vw;
-    fill: var(--background);
-}
-
-/* Parallax */
 .parallax {
     position: fixed;
     top: 2rem;
     left: 50%;
+    width: 95vw;
 
-    height: 50vh;
     -moz-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
     -o-transform: translate(-50%, 0);
     -webkit-transform: translate(-50%, 0);
-
     transform: translate(-50%, 0);
 }
 
 .regular {
     position: relative;
-    top: 50vh;
+}
+
+.regular .separator {
+    z-index: 2;
+    width: 100%;
+    height: 5vw;
+    fill: var(--background);
 }
 
 /* Parts */
 .info {
-    width: 50vh;
-    max-width: 90vw;
     margin-top: 1rem;
+    text-align: center;
 }
 
 .body {
@@ -79,6 +79,50 @@ body {
     width: 100%;
     min-height: 50vh;
     background-color: var(--background);
+}
+
+/* Header */
+#penguin {
+    max-width: 60vw;
+    height: 20vh;
+    cursor: pointer;
+}
+
+html[data-theme='dark'] #penguin {
+    -webkit-filter: drop-shadow(0 0 8px hsla(0, 100%, 100%, .5));
+    filter: drop-shadow(0 0 8px hsla(0, 100%, 100%, .5));
+}
+
+.foot {
+    fill: #fc9f3a;
+}
+
+.foot.dark {
+    fill: #f79411;
+}
+
+.outerBody {
+    fill: #2d2d2d;
+}
+
+.outerBody.dark {
+    fill: #252525;
+}
+
+.innerBody {
+    fill: #ffffff;
+}
+
+.eye {
+    fill: #252525;
+}
+
+.beak {
+    fill: #fc9f3a
+}
+
+.beak.dark {
+    fill: #f79411
 }
 
 /* Cards */
@@ -91,19 +135,28 @@ body {
 .card-container {
     display: flex;
     flex-direction: column;
+    order: 1;
     margin-bottom: 2rem;
 }
 
 .card {
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     width: 350px;
+    max-width: 90vw;
     margin: 0 3rem;
     text-align: center;
     border-radius: 19px;
-    background: white;
-    box-shadow: -1px 15px 30px -12px black;
+    background: var(--card);
+    box-shadow: -1px 15px 30px -12px #000000;
+}
+
+@media (max-width: 500px) {
+    .card {
+        margin: 0
+    }
 }
 
 .card-container:nth-child(2n) {
@@ -115,7 +168,7 @@ body {
 }
 
 .card .card-title {
-    position: absolute;
+    position: relative;
     width: 100%;
     border-top-left-radius: 14px;
     border-top-right-radius: 14px;
@@ -123,20 +176,15 @@ body {
 
 .card .card-content {
     width: 95%;
-    margin-top: 7rem;
-    margin-bottom: 3rem;
-}
-
-.card .content-image {
-    margin-top: 19rem;
+    margin: auto;
 }
 
 .card .card-bottom {
     font-weight: 700;
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
-    color: white;
+    color: #ffffff;
     border-bottom-right-radius: 14px;
     border-bottom-left-radius: 14px;
 }
@@ -145,20 +193,32 @@ body {
     background: linear-gradient(40deg, #45cafc, #606fd2);
 }
 
+html[data-theme='dark'] .card-blue .card-title {
+    background: linear-gradient(40deg, #2d3c9f, #007ba8);
+}
+
 .card-blue .card-bottom {
     background: #3f51b5;
 }
 
 .card-green .card-title {
-    background: linear-gradient(220deg, #43a396, #00db66);
+    background: linear-gradient(220deg, #43a396, #04c35d);
+}
+
+html[data-theme='dark'] .card-green .card-title {
+    background: linear-gradient(220deg, #008f43, #006658);
 }
 
 .card-green .card-bottom {
-    background: #40a569;
+    background: #33995c;
 }
 
 .card-yellow .card-title {
     background: linear-gradient(40deg, #f7971e, #ffd200);
+}
+
+html[data-theme='dark'] .card-yellow .card-title {
+    background: linear-gradient(40deg, #b38300, #c87004);
 }
 
 .card-yellow .card-bottom {
@@ -166,7 +226,11 @@ body {
 }
 
 .card-red .card-title {
-    background: linear-gradient(40deg, #cc6666, #af4b31);
+    background: linear-gradient(220deg, #d04935, #d01127);
+}
+
+html[data-theme='dark'] .card-red .card-title {
+    background: linear-gradient(220deg, #a51223, #a3452e);
 }
 
 .card-red .card-bottom {
@@ -175,6 +239,10 @@ body {
 
 .card-purple .card-title {
     background: linear-gradient(40deg, #d3507b, #9a64c4);
+}
+
+html[data-theme='dark'] .card-purple .card-title {
+    background: linear-gradient(40deg, #743c9e, #b5268f);
 }
 
 .card-purple .card-bottom {
@@ -206,17 +274,32 @@ body {
     color: inherit;
 }
 
-.card-title a {
-    margin-right: 35px;
+.title-content {
+    width: calc(100% - 50px);
 }
 
-.card-title img {
+.pin {
     position: absolute;
-    left: 0;
+    right: 8px;
+    bottom: 8px;
+    cursor: pointer;
+    transform: rotate(-45deg);
+}
+
+.pin:hover {
+    color: #dddddd;
+}
+
+.pinned {
+    order: 0;
+}
+
+.pinned .pin {
+    color: #8b0000;
+}
+
+.card img {
     width: 100%;
-    max-width: 100% !important;
-    height: 12rem;
-    object-fit: cover;
 }
 
 .card-title img.flag {
@@ -225,6 +308,6 @@ body {
     left: unset;
     width: 40px;
     height: 100%;
-    object-fit: unset;
     border-top-right-radius: 14px;
+    object-fit: unset;
 }
