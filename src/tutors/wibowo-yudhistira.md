@@ -2,12 +2,12 @@
 firstName: Yudhistira
 lastName: Wibowo
 website: https://home.in.tum.de/~wibowo/tutor/
-session: Not available yet
+session: Tuesday, 13:00
 location: Online
-sessionLink: https://bbb.in.tum.de/yud-4hd-a9p
-language: en
+language: de
 color: blue
 ---
 
-Hello, I am Yudhistira Wibowo and I came from a far far away. I am pleased to have a nice discussion.
-You can contact me on Discord (itsmeYAW#1268).
+Hallo, 
+ich bin Yudhistira Wibowo und studiere im Bachelor Informatik. Ich kann nicht sehr viel schreiben,
+aber ich bin auf Discord (itsmeYAW#1268) oder Zulip erreichbar.
