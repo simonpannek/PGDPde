@@ -3,7 +3,7 @@ firstName: Rafi
 lastName: Al Attrach
 image: attrach-rafi.jpg
 website: http://home.in.tum.de/~alattrac/
-session: Wednesday, 9:00
+session: Wednesday, 09:00
 location: Online
 language: en
 color: red
