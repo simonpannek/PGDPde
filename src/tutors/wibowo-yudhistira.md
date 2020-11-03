@@ -10,4 +10,4 @@ color: blue
 ---
 
 Hallo, 
-ich bin Yudhistira Wibowo und studiere Bachelor Informatik. Ich kann nicht sehr viel schreiben aber ihr könnt mich gerne auf Discord (itsmeYAW#1268) oder Zulip.
+ich bin Yudhistira Wibowo und studiere Bachelor Informatik. Ich kann nicht sehr viel schreiben aber ich bin auf Discord (itsmeYAW#1268) oder Zulip erreichbar.
