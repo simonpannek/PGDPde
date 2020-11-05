@@ -12,5 +12,6 @@ color: green
 Hi, ich bin Jan-Luca :) 
 Ich bin 20 Jahre alt und liebe Pinguine 🐧.
 Ich bin im 3. Semester und studiere Wirtschaftsinformatik.
-Auf meiner Webseite findet ihr Folien zum Tutorium die gleichzeitig als Themenüberblick dienen.
+
+Auf meiner Webseite findet ihr Folien zum Tutorium, die gleichzeitig als Themenüberblick dienen.
 PS: Mein Discordtag: Krokofant#0001
