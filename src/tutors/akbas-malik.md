@@ -1,6 +1,7 @@
 ---
 firstName: Malik
 lastName: Akbas
+image: akbas-malik.jpg
 session: Tuesday, 17:00
 location: Online
 sessionLink: https://bbb.in.tum.de/mal-tz3-gaq
@@ -12,3 +13,4 @@ Hallo, ich bin Malik ein Orca und Pinguin Liebhaber, auch wenn es widersprüchli
 Aktuell studiere ich im dritten Semester Bachelor Informatik.
 
 Man findet mich sowohl auf Discord (Enti#8467), als auch auf Zulip.
+Ich freue mich darauf, jeden von euch im Tutorium zu "treffen".
