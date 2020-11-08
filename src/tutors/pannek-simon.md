@@ -2,6 +2,7 @@
 firstName: Simon
 lastName: Pannek
 image: pannek-simon.jpg
+website: https://simon.pgdp.de/
 session: Monday, 09:00
 location: Online
 sessionLink: https://bbb.in.tum.de/sim-rhc-qgk
