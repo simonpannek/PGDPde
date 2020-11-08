@@ -7,3 +7,9 @@
     to = "https://pgdp.de/:splat"
     status = 301
     force = true
+
+[[redirects]]
+    from = "https://simon.pgdp.de/*"
+    to = "https://simonpannek.com/home/teaching/pgdp-2021/:splat"
+    status = 301
+    force = true
