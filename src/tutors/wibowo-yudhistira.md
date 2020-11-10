@@ -4,7 +4,7 @@ lastName: Wibowo
 website: https://home.in.tum.de/~wibowo/tutor/
 session: Tuesday, 13:00
 location: Online
-sessionLink: https://bbb.rbg.tum.de/yud-4hd-a9p
+sessionLink: https://bbb.in.tum.de/yud-4hd-a9p
 language: de
 color: blue
 ---
