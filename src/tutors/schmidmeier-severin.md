@@ -3,7 +3,7 @@ firstName: Severin
 lastName: Schmidmeier
 session: Thursday, 15:00
 location: Online
-sessionLink: https://bbb.rbg.tum.de/sev-6pm-qhj
+sessionLink: https://bbb.in.tum.de/sev-6pm-qhj
 language: de
 color: purple
 ---
