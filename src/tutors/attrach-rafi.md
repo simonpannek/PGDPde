@@ -5,7 +5,7 @@ image: attrach-rafi.jpg
 website: http://home.in.tum.de/~alattrac/
 session: Wednesday, 09:00
 location: Online
-sessionLink: https://bbb.rbg.tum.de/raf-xu7-vna
+sessionLink: https://bbb.in.tum.de/raf-xu7-vna
 language: en
 color: red
 ---
