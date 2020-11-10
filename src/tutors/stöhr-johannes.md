@@ -1,7 +1,7 @@
 ---
 firstName: Johannes
 lastName: Stöhr
-image: stöhr-johannes.jpg
+image: stoehr-johannes.jpg
 session: Friday, 13:00
 location: Online
 sessionLink: https://bbb.in.tum.de/joh-6ym-mx3
