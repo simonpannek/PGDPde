@@ -135,8 +135,17 @@ html[data-theme='dark'] #penguin {
 .card-container {
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     order: 1;
     margin-bottom: 2rem;
+}
+
+.card-container:nth-child(2n) {
+    justify-content: flex-start;
+}
+
+.card-container:nth-child(3n) {
+    justify-content: center;
 }
 
 .card {
@@ -153,18 +162,15 @@ html[data-theme='dark'] #penguin {
     box-shadow: -1px 15px 30px -12px #000000;
 }
 
+.no-image {
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
 @media (max-width: 500px) {
     .card {
         margin: 0
     }
-}
-
-.card-container:nth-child(2n) {
-    justify-content: flex-end;
-}
-
-.card-container:nth-child(3n) {
-    justify-content: center;
 }
 
 .card .card-title {

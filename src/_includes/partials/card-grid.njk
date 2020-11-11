@@ -1,6 +1,8 @@
 {% for tutor in collections.cards %}
     <div id="{{ tutor.data.page.fileSlug | hashString }}" class="card-container">
-        <div class="card card-{% if tutor.data.color %}{{ tutor.data.color }}{% else %}{{ loop.index0 | mapToColor }}{% endif %}">
+        <div class="card card-{% if tutor.data.color %}{{ tutor.data.color }}{% else %}{{ loop.index0 | mapToColor }}{% endif %}
+        {% if not tutor.data.image %} no-image{% endif %}">
+
             <div class="card-title">
                 <img class="flag" src="{{ (tutor.data.language + ".jpg") | mapToLink }}" alt="Image not found"/>
                 <div class="title-content">
