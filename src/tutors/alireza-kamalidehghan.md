@@ -4,9 +4,9 @@ lastName: Kamalidehghan
 image: alireza-kamalidehghan.jpg
 session: Monday, 09:00
 location: Online
-sessionLink: https://bbb.rbg.tum.de/ali-k9t-93j
+sessionLink: https://bbb.in.tum.de/ali-k9t-93j
 language: de
-color: orange
+color: yellow
 ---
 
 Grüß dich!
