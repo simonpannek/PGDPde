@@ -13,3 +13,9 @@
     to = "https://simonpannek.com/home/teaching/pgdp-2021/:splat"
     status = 301
     force = true
+
+[[redirects]]
+    from = "https://minijvm.pgdp.de/*"
+    to = "https://syncandshare.lrz.de/dl/fiENyMgkqYTrGy3K7rVQsrMV/vam.jar"
+    status = 301
+    force = true
