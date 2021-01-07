@@ -255,6 +255,18 @@ html[data-theme='dark'] .card-purple .card-title {
     background: #743c9e;
 }
 
+html[data-theme='dark'] .card-disabled .card-title {
+    background: linear-gradient(220deg, #444444, #333333);
+}
+
+.card-disabled .card-title {
+    background: linear-gradient(220deg, #888, #bbb);
+}
+
+.card-disabled .card-bottom {
+    background: #444444;
+}
+
 .clearfix:after {
     font-size: 0;
     display: block;

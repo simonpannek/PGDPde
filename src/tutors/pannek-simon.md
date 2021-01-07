@@ -3,11 +3,11 @@ firstName: Simon
 lastName: Pannek
 image: pannek-simon.jpg
 website: https://simon.pgdp.de/
-session: Monday, 09:00
+session: disabled
 location: Online
-sessionLink: https://bbb.in.tum.de/sim-rhc-qgk
 language: de
 color: yellow
+disabled: true
 ---
 
 Hallo, ich bin Simon und ich studiere aktuell im 3. Semester des Bachelor Informatik.<br/>
