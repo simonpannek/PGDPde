@@ -11,7 +11,7 @@ color: red
 
 Servus, ich bin Lukas!
 
-Ich bin 20 Jahre alt, studiere derzeit im 7. Semester Mathematik und bin auch dieses Jahr wieder als Tutor dabei.
+Ich bin 21 Jahre alt, studiere derzeit im 7. Semester Mathematik und bin auch dieses Jahr wieder als Tutor dabei.
 
 Am einfachsten könnt ihr mich auf Zulip erreichen.
 Bitte schreibt mich da auch gerne an, falls ihr in meinem Tutorium vorbeischauen wollt.
