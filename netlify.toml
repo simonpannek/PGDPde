@@ -15,7 +15,7 @@
     force = true
 
 [[redirects]]
-    from = "https://chat.pgdp.de/*"
+    from = "https://tweedback.pgdp.de/*"
     to = "https://tweedback.de/"
     status = 302
     force = true
