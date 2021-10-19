@@ -9,13 +9,13 @@
     force = true
 
 [[redirects]]
-    from = "https://simon.pgdp.de/*"
-    to = "https://simonpannek.com/home/teaching/pgdp-2021/:splat"
+    from = "https://minijvm.pgdp.de/*"
+    to = "https://syncandshare.lrz.de/dl/fiENyMgkqYTrGy3K7rVQsrMV/vam.jar"
     status = 301
     force = true
 
 [[redirects]]
-    from = "https://minijvm.pgdp.de/*"
-    to = "https://syncandshare.lrz.de/dl/fiENyMgkqYTrGy3K7rVQsrMV/vam.jar"
-    status = 301
+    from = "https://chat.pgdp.de/*"
+    to = "https://tweedback.de/"
+    status = 302
     force = true
