@@ -2,8 +2,9 @@
 firstName: Johannes
 lastName: Stöhr
 image: stoehr-johannes.jpg
-session: Not available yet
+session: Friday, 15:00
 location: Online
+sessionLink: https://bbb.in.tum.de/joh-cib-2qa-xkg
 language: de
 color: green
 ---
