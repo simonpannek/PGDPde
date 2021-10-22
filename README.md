@@ -19,6 +19,7 @@ If you want to add another tutor, just add your file to the folder /src/tutors/ 
 Notes:
 - Before opening a pull request, check whether your changes have the right syntax and format.
 This saves me a lot of time.
+- Make sure that any pictures uploaded have a width of 500px.
 - Please do not add tutors on this site without their agreement.
 - If you want content to be removed from this site, open a new pull request or message me.
 
