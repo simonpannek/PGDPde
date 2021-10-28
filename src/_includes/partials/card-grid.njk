@@ -40,7 +40,7 @@
                 <p>{% if tutor.data.sessionLink %}
                         <a href="{{ tutor.data.sessionLink }}">Link to session</a>
                     {% else %}
-                        No link available
+                       <a href="https://www.ph.tum.de/about/visit/roomfinder/?room={{ tutor.data.location }}">Link to Roomfinder</a>
                     {% endif %}</p>
             </div>
         </div>
