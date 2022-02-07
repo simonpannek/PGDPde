@@ -16,6 +16,6 @@
 
 [[redirects]]
     from = "https://tweedback.pgdp.de/*"
-    to = "https://tweedback.de/euwz/chatwall"
+    to = "https://tweedback.de/eubm/chatwall"
     status = 302
     force = true
