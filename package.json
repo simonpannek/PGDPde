@@ -30,6 +30,6 @@
     "intl-list-format": "^1.0.3",
     "purgecss": "^3.0.0",
     "rimraf": "^3.0.2",
-    "terser": "^5.3.8"
+    "terser": "^5.14.2"
   }
 }
